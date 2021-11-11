@@ -27,7 +27,7 @@ router.post('/addnote', fetchuser, [
 
         const saveNote = await note.save();
 
-        res.json( saveNote );
+        res.json(saveNote);
     }
     catch (error) {
         console.error(error.message);
@@ -88,7 +88,7 @@ router.put('/updatenotes/:id', fetchuser, async (req, res) => {
         console.error(error.message);
         res.status(500).send("Interval Server Error.");
     }
-    
+
 
 
 })
@@ -118,7 +118,7 @@ router.delete('/deletenotes/:id', fetchuser, async (req, res) => {
         console.error(error.message);
         res.status(500).send("Interval Server Error.");
     }
-    
+
 
 
 })

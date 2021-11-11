@@ -19,5 +19,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`MyNotebook app listening at http://localhost:${port}`)
+  console.log(`My-iNotes app listening at http://localhost:${port}`)
 })

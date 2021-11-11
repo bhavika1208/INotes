@@ -32,7 +32,7 @@ router.post('/createuser', [
     //If there are errors, return Bad request and the errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({success, errors: errors.array() });
+        return res.status(400).json({ success, errors: errors.array() });
     }
 
 
@@ -40,7 +40,7 @@ router.post('/createuser', [
         //Check whether the user with this email exists already
         let user = await User.findOne({ email: req.body.email });
         if (user) {
-            return res.status(400).json({success, error: "Sorry a user with this email already exists" });
+            return res.status(400).json({ success, error: "Sorry a user with this email already exists" });
         }
 
         //Password Hashing and Salt
